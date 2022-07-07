@@ -8,6 +8,8 @@ import com.hanyeop.mvvmsample_2.utils.ResultType
 import com.hanyeop.mvvmsample_2.view.main.MainAdapter
 
 object RecyclerViewBinding {
+
+    // 1번 방법
     @JvmStatic
     @BindingAdapter("submitList")
     fun bindSubmitList(view: RecyclerView, result: ResultType<*>) {
