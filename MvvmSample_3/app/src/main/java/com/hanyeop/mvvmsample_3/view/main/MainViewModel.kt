@@ -1,9 +1,7 @@
 package com.hanyeop.mvvmsample_3.view.main
 
-import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.hanyeop.mvvmsample_3.R
 import com.hanyeop.mvvmsample_3.model.Post
 import com.hanyeop.mvvmsample_3.usecase.post.GetPostsUseCase
 import com.hanyeop.mvvmsample_3.utils.ResultType
@@ -25,6 +23,9 @@ class MainViewModel @Inject constructor(
     private val _errorMsg = MutableSharedFlow<String>()
     val errorMsg = _errorMsg.asSharedFlow()
 
+    private val _getPostsResult: MutableStateFlow<ResultType<List<Post>>> = MutableStateFlow(ResultType.Uninitialized)
+    val getPostsResult get() = _getPostsResult.asStateFlow()
+
     val editTextView: MutableStateFlow<String> = MutableStateFlow("")
 
     fun getPosts(){
@@ -34,7 +35,7 @@ class MainViewModel @Inject constructor(
             }
             else {
                 getPostsUseCase.execute(editTextView.value.toInt()).collectLatest {
-                    Log.d("test5", "getPosts: $it")
+                    _getPostsResult.value = it
                     when (it) {
                         is ResultType.Success -> {
                             _postList.value = it.data
