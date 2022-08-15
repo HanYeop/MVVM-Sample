@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">MvvmSample_4</string>
+    <string name="btn_search">검색</string>
+    <string name="error_network">인터넷 연결 상태를 확인해주세요.</string>
+    <string name="error_unknown">알 수 없는 오류가 발생했습니다.</string>
+    <string name="error_empty">검색 결과가 없습니다.</string>
+    <string name="error_input">입력을 확인해주세요</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navi_graph_bottom"
+    app:startDestination="@id/oneFragment"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <keep_state_fragment
+        android:id="@+id/oneFragment"
+        android:name="com.hanyeop.mvvmsample_4.view.one.OneFragment"
+        android:label="OneFragment"
+        tools:layout="@layout/fragment_one"/>
+    <keep_state_fragment
+        android:id="@+id/twoFragment"
+        android:name="com.hanyeop.mvvmsample_4.view.two.TwoFragment"
+        android:label="TwoFragment"
+        tools:layout="@layout/fragment_two"/>
+    <keep_state_fragment
+        android:id="@+id/threeFragment"
+        android:name="com.hanyeop.mvvmsample_4.view.three.ThreeFragment"
+        android:label="ThreeFragment"
+        tools:layout="@layout/fragment_three"/>
+</navigation>
