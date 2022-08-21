@@ -30,7 +30,7 @@ class OneFragment : BaseFragmentMain<FragmentOneBinding>(R.layout.fragment_one) 
     }
 
     private fun initViewModelCallback(){
-        // 생명주기에 맞춰 코루틴을 취소한다.
+        // 생명주기에 맞춰 코루틴을 취소, 시작 한다.
         repeatOnStarted{
             oneViewModel.errorMsg.collectLatest { msg ->
                 showToast(msg)
@@ -42,7 +42,7 @@ class OneFragment : BaseFragmentMain<FragmentOneBinding>(R.layout.fragment_one) 
             }
         }
 
-        // 생명주기에 맞춰 코루틴을 일시 중지한다.
+        // 생명주기에 맞춰 코루틴을 일시 중지, 다시 시작한다.
         lifecycleScope.launchWhenStarted {
 
         }

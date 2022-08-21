@@ -1,4 +1,4 @@
-package com.hanyeop.mvvmsample_4.usecase
+package com.hanyeop.mvvmsample_4.usecase.post
 
 import com.hanyeop.mvvmsample_4.repository.PostRepository
 import javax.inject.Inject
