@@ -38,6 +38,6 @@ class MyCalcTest {
     fun calculateArea_zeroRadius_returnsCorrectResult() {
         val result = myCalc.calculateCircumference(0.0)
         assertThat(result).isEqualTo(0.0)
-        
+
     }
 }
